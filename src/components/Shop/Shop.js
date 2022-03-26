@@ -30,7 +30,10 @@ const Shop = () => {
     }
   }
 
-
+  const clearCart = () => {
+    setCart([]);
+    setChoosenCart(null);
+  }
   return (
     <>
       <div className='row p-4'>
@@ -42,7 +45,7 @@ const Shop = () => {
           </div>
         </div>
         <div className='col-4'>
-          <Cart cart={cart} chooseOne={chooseOne} choosenCart={choosenCart}></Cart>
+          <Cart cart={cart} chooseOne={chooseOne} choosenCart={choosenCart} clearCart={clearCart}></Cart>
         </div>
       </div>
 
