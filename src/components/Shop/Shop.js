@@ -1,23 +1,36 @@
 import { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [choosenCart, setChoosenCart] = useState(null);
   useEffect(() => {
     fetch('products.json')
       .then(res => res.json())
       .then(data => setProducts(data))
   }, []);
-  // console.log(cart);
+
   const handelCart = (product) => {
-    const addedItem = [...cart, product];
-    if (addedItem.length === 4) {
+    if (cart.length <= 3) {
+      const addedItem = [...cart, product];
+      setCart(addedItem);
+    }
+    else {
       alert("You can choose only 4");
     }
-    setCart(addedItem);
   }
-  console.log(cart);
+
+  const chooseOne = () => {
+    if (cart) {
+      const randNo = Math.floor(Math.random() * 4) + 1
+      const singleCart = cart.find((item) => item.id === randNo);
+      setChoosenCart(singleCart);
+    }
+  }
+
+
   return (
     <>
       <div className='row p-4'>
@@ -29,14 +42,7 @@ const Shop = () => {
           </div>
         </div>
         <div className='col-4'>
-          <div className='border p-3'>
-            <h3>Choose option</h3>
-            {
-              cart.map(item => <p key={item.id}>{item.name}</p>)
-            }
-            <button type="button" class="btn btn-primary">CHOOSE 1 FOR ME</button> <br />
-            <button type="button" class="btn btn-danger mt-3">CHOOSE AGAIN</button>
-          </div>
+          <Cart cart={cart} chooseOne={chooseOne} choosenCart={choosenCart}></Cart>
         </div>
       </div>
 
