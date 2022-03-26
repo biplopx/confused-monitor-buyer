@@ -12,12 +12,15 @@ const Shop = () => {
   // console.log(cart);
   const handelCart = (product) => {
     const addedItem = [...cart, product];
+    if (addedItem.length === 4) {
+      alert("You can choose only 4");
+    }
     setCart(addedItem);
   }
   console.log(cart);
   return (
     <>
-      <div className='row p-5'>
+      <div className='row p-4'>
         <div className='col-8'>
           <div className='row row-cols-1 row-cols-md-3 g-4'>
             {
@@ -29,11 +32,12 @@ const Shop = () => {
           <div className='border p-3'>
             <h3>Choose option</h3>
             {
-              cart.map(item => <h3 key={item.id}>{item.name}</h3>)
+              cart.map(item => <p key={item.id}>{item.name}</p>)
             }
+            <button type="button" class="btn btn-primary">CHOOSE 1 FOR ME</button> <br />
+            <button type="button" class="btn btn-danger mt-3">CHOOSE AGAIN</button>
           </div>
         </div>
-
       </div>
 
     </>
