@@ -5,7 +5,7 @@ import Product from '../Product/Product';
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  const [choosenCart, setChoosenCart] = useState(null);
+  const [choosenCart, setChoosenCart] = useState({});
   useEffect(() => {
     fetch('products.json')
       .then(res => res.json())
@@ -14,8 +14,19 @@ const Shop = () => {
 
   const handelCart = (product) => {
     if (cart.length <= 3) {
-      const addedItem = [...cart, product];
-      setCart(addedItem);
+      let exist;
+      if (cart.some(item => item.id === product.id)) {
+        exist = true;
+        alert("Item Already Added");
+      } else {
+        exist = false;
+      }
+
+      if (!exist) {
+        const addedItem = [...cart, product];
+        setCart(addedItem);
+      }
+
     }
     else {
       alert("You can choose only 4");
@@ -23,28 +34,25 @@ const Shop = () => {
   }
 
   const chooseOne = () => {
-    if (cart) {
-      const randNo = Math.floor(Math.random() * 4) + 1
-      const singleCart = cart.find((item) => item.id === randNo);
-      setChoosenCart(singleCart);
-    }
+    const randNo = Math.floor(Math.random() * 3) + 1;
+    const singleItem = cart[randNo];
+    setChoosenCart(singleItem);
   }
 
   const clearCart = () => {
     setCart([]);
-    setChoosenCart(null);
   }
   return (
     <>
       <div className='row p-4'>
-        <div className='col-8'>
-          <div className='row row-cols-1 row-cols-md-3 g-4'>
+        <div className='col-lg-8'>
+          <div className='row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 mb-3'>
             {
               products.map(product => <Product key={product.id} product={product} handelCart={handelCart}></Product>)
             }
           </div>
         </div>
-        <div className='col-4'>
+        <div className='col-lg-4'>
           <Cart cart={cart} chooseOne={chooseOne} choosenCart={choosenCart} clearCart={clearCart}></Cart>
         </div>
       </div>
