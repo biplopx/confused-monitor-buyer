@@ -34,13 +34,14 @@ const Shop = () => {
   }
 
   const chooseOne = () => {
-    const randNo = Math.floor(Math.random() * 3) + 1;
+    const randNo = Math.floor(Math.random() * cart.length - 1) + 1;
     const singleItem = cart[randNo];
     setChoosenCart(singleItem);
   }
 
   const clearCart = () => {
     setCart([]);
+    setChoosenCart({})
   }
   return (
     <>

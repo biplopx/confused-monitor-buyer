@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Confused Monitor Buyer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project Live Link: [https://confused-monitor-buyer.netlify.app/](https://confused-monitor-buyer.netlify.app/).
 
 ## Available Scripts
 
