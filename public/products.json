@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "BenQ GW2780 27 inch Full HD Eye-care IPS Monitor",
+    "price": 27500,
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/benq/gw2780/gw2780-500x500.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Asus VZ229HE Eye Care Full HD IPS 21.5 Monitor",
+    "price": 15800,
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/asus/vz229he/vz229he-500x500.jpg"
+  },
+  {
+    "id": 3,
+    "name": "LG 22MK600M 21.5 inch IPS Full HD LED Monitor",
+    "price": 15900,
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/22mk600m/lg-22mk600m-1-500x500.jpg"
+  },
+  {
+    "id": 4,
+    "name": "HP M22f 22 FHD IPS Monitor",
+    "price": 17500,
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/m22f/m22f-500x500.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Dell S2421HN 24'' IPS AMD FreeSync Full HD Monitor",
+    "price": 22000,
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/dell/s2421hn/s2421hn-1-500x500.jpg"
+  },
+  {
+    "id": 6,
+    "name": "SAMSUNG LF22T350 22 Full HD IPS LED Monitor",
+    "price": 15500,
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/lf22t350fhnxza/lf22t350fhnxza-500x500.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Philips 221V8 22 FHD Monitor",
+    "price": 14900,
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/philips/221v8/221v8-01-500x500.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Viewsonic VX2276-SHD 75hz 21.5 FHD IPS LED Monitor",
+    "price": 16700,
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/viewsonic/vx2276-smhd/vx2276-smhd-500x500.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Gigabyte G34WQC 34 144Hz FreeSync Ultra wide Gaming Monitor",
+    "price": 45900,
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/gigabyte/g34wqc/g34wqc-01-500x500.jpg"
+  },
+  {
+    "id": 10,
+    "name": "LG 19M38A 18.5 Inch Monitor",
+    "price": 10400,
+    "image": "https://www.startech.com.bd/image/cache/catalog/Monitor/LG%20Monitor/LG%2019M38A-500x500.jpg"
+  }
+]
